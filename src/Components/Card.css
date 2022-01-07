@@ -1,0 +1,66 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2), -2px -2px 4px 0 rgba(0,0,0,0.2);
+    --delete: #ff0000;
+    --primary-blue: #00acee;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.list-box{
+    position: relative;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.list-box li{
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+.list-item{
+    position: relative;
+    width: 80%;
+    text-align: left;
+}
+.list-item h2{
+    padding: 0 10px;
+    background: #E55D87;
+    background: -webkit-linear-gradient(to left, #5FC3E4, #E55D87);
+    background: linear-gradient(to left, #5FC3E4, #E55D87);
+    font-weight: 800;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate(5px, 4px);
+}
+.icons{
+    width: calc(20% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* filter: drop-shadow(1px 1px 2px var(--primary-blue)); */
+}
+.icon:hover{
+    transform: scale(1.5);
+    color: var(--primary-blue);
+    filter: drop-shadow(1px 1px 1px var(--primary-blue));
+}
+.icons:last-child{
+    color: var(--delete);
+}
